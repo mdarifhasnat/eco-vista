@@ -1,5 +1,5 @@
+import LocationDetector from "./components/LocationDetector";
 import LocationInfo from "./components/LocationInfo";
-import NoLocationInfo from "./components/NoLocationInfo";
 import { getResolvedLatLong } from "./lib/location-info";
 
 export default async function Home({
@@ -11,6 +11,6 @@ export default async function Home({
   if (resolved?.lat && resolved?.lon) {
     return <LocationInfo lat={resolved.lat} lon={resolved.lon} />;
   } else {
-    return <NoLocationInfo />;
+    return <LocationDetector />;
   }
 }
