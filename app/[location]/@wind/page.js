@@ -1,8 +1,9 @@
+import WindComponent from "@/app/components/WindComponent";
 
-const WindPage = () => {
-  return (
-    <div>WindPage</div>
-  )
-}
-
-export default WindPage
+const WindPage = ({
+  params: { location },
+  searchParams: { latitude, longitude },
+}) => {
+  return <WindComponent lat={latitude} lon={longitude} />;
+};
+export default WindPage;

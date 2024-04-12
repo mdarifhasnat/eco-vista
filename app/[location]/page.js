@@ -1,9 +1,10 @@
-import WindComponent from "../components/WindComponent";
+import LocationInfo from "../components/LocationInfo";
 
-const WindPage = ({
+const TemperaturePage = ({
   params: { location },
   searchParams: { latitude, longitude },
 }) => {
-  return <WindComponent lat={latitude} lon={longitude} />;
+  return <LocationInfo lat={latitude} lon={longitude} />;
 };
-export default WindPage;
+
+export default TemperaturePage;

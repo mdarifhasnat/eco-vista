@@ -1,12 +1,12 @@
 export const getLocationData = async (lat, lon) => {
   try {
-    const res = await fetch(
-      `https://api-bdc.net/data/reverse-geocode?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=${process.env.BIG_DATA_COUD_API_KEY}`
+    const response = await fetch(
+      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}`
     );
-    const data = await res.json();
+    const data = await response.json();
     return data;
-  } catch (error) {
-    console.log(error.message);
+  } catch (e) {
+    console.error(e.message);
   }
 };
 
