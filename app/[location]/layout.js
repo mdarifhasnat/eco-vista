@@ -24,6 +24,7 @@ export default function RootLayout({
         className="bg-img"
         width={700}
         height={1200}
+        alt="background image"
       />
       <main className="!z-50 w-full">
         <div className="container">
