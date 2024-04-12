@@ -12,7 +12,7 @@ export const getLocationData = async (lat, lon) => {
 
 export const getLocationLatLongList = async () => {
   try {
-    const res = await fetch(`http://localhost:3000/api/location`);
+    const res = await fetch(`/api/location`);
     const data = await res.json();
     return data;
   } catch (error) {
@@ -22,9 +22,7 @@ export const getLocationLatLongList = async () => {
 
 export const getLocationLatLong = async (locationName) => {
   try {
-    const res = await fetch(
-      `http://localhost:3000/api/location/${locationName}`
-    );
+    const res = await fetch(`/api/location/${locationName}`);
     const data = await res.json();
     return data;
   } catch (error) {
